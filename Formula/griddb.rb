@@ -8,7 +8,6 @@ class Griddb < Formula
   version "1.0.0"
   # Homebrew requires tests.
   def install
-    system "brew install libtool" , "brew install automake", "brew install autoconf"
     system "./client/c/bootstrap.sh"
     system "./client/c/configure"
     system "client/c/make"
