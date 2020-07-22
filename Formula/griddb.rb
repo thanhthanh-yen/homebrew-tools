@@ -1,14 +1,25 @@
 require "formula"
 
 class Griddb < Formula
+  desc "Internet file retriever"
   homepage "https://github.com/tungduong97/homebrew-tools"
   url "https://github.com/tungduong97/homebrew-tools/releases/download/1.0.0/griddb-macos-installer-x64-4.5.0.pkg"
   sha256 "3b7930506d636ee4c684b5ec2206fed6c116523da8c6c827042dcd745c682260"
   version "1.0.0"
   # Homebrew requires tests.
+  head do
+    url "https://git.savannah.gnu.org/git/wget.git"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "xz" => :build
+    depends_on "gettext"
+  end
   def install
-    system "sudo installer -pkg griddb-macos-installer-x64-4.5.0.pkg -target /"
-    bin.install "griddb"
+    system "./bootstrap" if build.head?
+    system "./configure", "--prefix=#{prefix}",
+
+    system "make", "install"
   end
 
   test do
