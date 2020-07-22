@@ -5,7 +5,7 @@ class Griddb < Formula
   homepage "https://github.com/tungduong97/homebrew-tools"
   url "https://github.com/tungduong97/homebrew-tools/files/4959623/griddbduong.tar.gz"
   #sha256 "3b7930506d636ee4c684b5ec2206fed6c116523da8c6c827042dcd745c682260"
-  sha256 "ece901dc822d5a1ff8c1980688f055934039a5ff62628f8782ce62ac3ea8db10"
+  sha256 "0189411e5d20f296301c589e23a56dfa4994342fad158dc62227e4126253c77"
   version "1.0.0"
   # Homebrew requires tests.
   def install
