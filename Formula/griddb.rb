@@ -8,10 +8,9 @@ class Griddb < Formula
   version "1.0.0"
   # Homebrew requires tests.
   def install
-    system "cd client/c/"
-    system "./bootstrap.sh"
-    system "./configure"
-    system "make"
+    system "./client/c/bootstrap.sh"
+    system "./client/c/configure"
+    system "client/c/make"
   end
 
   test do
