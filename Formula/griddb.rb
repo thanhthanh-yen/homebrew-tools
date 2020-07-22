@@ -7,8 +7,9 @@ class Griddb < Formula
   version "1.0.0"
   # Homebrew requires tests.
   def install
-    system "./client/c/bootstrap.sh"
-    system "../client/c/configure", "--prefix=#{prefix}"
+    system " cd client/c/"
+    system ".bootstrap.sh"
+    system "./configure", "--prefix=#{prefix}"
     system "make", "install"
     bin.install "griddb"
   end
