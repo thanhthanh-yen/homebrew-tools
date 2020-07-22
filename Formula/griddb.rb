@@ -2,7 +2,6 @@ require "formula"
 
 class Griddb < Formula
   homepage "https://github.com/tungduong97/homebrew-tools"
-  url "https://github.com/tungduong97/homebrew-tools/releases/download/1.0.0/griddb-macos-installer-x64-4.5.0.pkg"
   system "wget https://github.com/tungduong97/homebrew-tools/releases/download/1.0.0/griddb-macos-installer-x64-4.5.0.pkg"
   system "sudo installer -pkg griddb-macos-installer-x64-4.5.0.pkg -target /"
   version "1.0.0"
