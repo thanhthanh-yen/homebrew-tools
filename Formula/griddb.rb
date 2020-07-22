@@ -27,7 +27,7 @@ class Griddb < Formula
   end
   
   def install
-    system "cd client/c/", "./configure" if build.head?
+    system "cd client/c/", "./configure"
     system "make"
   end
 
