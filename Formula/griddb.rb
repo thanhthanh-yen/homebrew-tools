@@ -19,7 +19,7 @@ class Griddb < Formula
     system "./bootstrap" if build.head?
     system "./configure", "--prefix=#{prefix}",
 
-    system "make", "install"
+    system "make"
   end
 
   test do
