@@ -17,7 +17,7 @@ class Griddb < Formula
   end
   def install
     system "./bootstrap" if build.head?
-    system "./configure", "--prefix=#{prefix}",
+    system "./configure", "--prefix=#{prefix}"
 
     system "make"
   end
