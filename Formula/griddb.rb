@@ -8,17 +8,9 @@ class Griddb < Formula
   sha256 "ece901dc822d5a1ff8c1980688f055934039a5ff62628f8782ce62ac3ea8db10"
   version "1.0.0"
   # Homebrew requires tests.
-  head do
-    url "https://git.savannah.gnu.org/git/wget.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "xz" => :build
-    depends_on "gettext"
-  end
   def install
-    system "./bootstrap" if build.head?
-    system "./configure", "--prefix=#{prefix}"
+    system "./client/c/bootstrap.sh"
+    system "./client/c/configure", "--prefix=#{prefix}"
 
     system "make"
   end
