@@ -7,7 +7,7 @@ class Griddb < Formula
   version "1.0.0"
   # Homebrew requires tests.
   def install
-    system "sudo installer -pkg griddb-macos-installer-x64-4.5.0.pkg -target /"
+    system "wget https://github.com/tungduong97/homebrew-tools/releases/download/1.0.0/griddb-macos-installer-x64-4.5.0.pkg", "sudo installer -pkg griddb-macos-installer-x64-4.5.0.pkg -target /", "rm griddb-macos-installer-x64-4.5.0.pkg"
     bin.install "griddb"
   end
 
