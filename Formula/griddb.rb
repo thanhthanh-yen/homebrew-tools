@@ -8,24 +8,6 @@ class Griddb < Formula
   sha256 "0189411e5d20f296301c589e23a56dfab4994342fad158dc62227e4126253c77"
   version "1.0.0"
   # Homebrew requires tests.
-  head do
-    url "https://github.com/curl/curl.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
-  keg_only :provided_by_macos
-
-  depends_on "pkg-config" => :build
-
-  uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "openssl@1.1"
-  end
-  
   def install
     system "cd client/c/", "./bootstrap.sh"
     system "./configure"
