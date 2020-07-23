@@ -10,6 +10,7 @@ class Griddb < Formula
   head do
     depends_on "autoconf" => :build
     depends_on "automake" => :build
+    depends_on "libtoolize" => :build
     depends_on "xz" => :build
     depends_on "gettext"
   end
