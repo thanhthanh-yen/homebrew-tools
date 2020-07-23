@@ -13,7 +13,6 @@ class Griddb < Formula
     depends_on "libtool" => :build
     depends_on "xz" => :build
     depends_on "gettext"
-    system "ln -s /usr/local/bin/glibtoolize /usr/local/bin/libtoolize"
   end
 
   depends_on "pkg-config" => :build
