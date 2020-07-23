@@ -10,7 +10,7 @@ class Griddb < Formula
   head do
     depends_on "autoconf" => :build
     depends_on "automake" => :build
-    depends_on "libtoolize" => :build
+    depends_on "libtool" => :build
     depends_on "xz" => :build
     depends_on "gettext"
   end
@@ -23,6 +23,7 @@ class Griddb < Formula
     depends_on "util-linux"
   end
   def install
+    system "ln -s /usr/local/bin/glibtoolize /usr/local/bin/libtoolize"
     system "./client/c/bootstrap.sh", "--skip-po" if build.head?
     system "./client/c/configure"
     system "client/c/make"
