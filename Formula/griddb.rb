@@ -23,10 +23,7 @@ class Griddb < Formula
     depends_on "util-linux"
   end
   def install
-    system "cd client/c"
-    system "./bootstrap.sh", "--skip-po" if build.head?
-    system "./configure"
-    system "make"
+    bin.install "griddb"
   end
 
   test do
