@@ -23,7 +23,7 @@ class Griddb < Formula
     depends_on "util-linux"
   end
   def install
-    bin.install "griddb"
+    bin.install "griddb-c-client"
   end
 
   test do
