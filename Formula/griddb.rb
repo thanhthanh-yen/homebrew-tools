@@ -7,9 +7,7 @@ class Griddb < Formula
   sha256 "c2b75496198bd9c6505c942556c30f4839e930270d5064b9fff3a9ac0abce93e"
   version "1.0.0"
   
-  depends_on "autoconf"
-  depends_on "automake"
-  depends_on "libtool"
+  depends_on "autoconf", "automake", "libtool"
 
   def install
     system "cd client/c; ./bootstrap.sh; ./configure; make"
