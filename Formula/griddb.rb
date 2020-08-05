@@ -4,7 +4,7 @@ class Griddb < Formula
   desc "Internet file retriever"
   homepage "https://github.com/tungduong97/homebrew-tools"
   url "https://github.com/tungduong97/homebrew-tools/files/5026607/griddb-c-client-4.3.1.tar.gz"
-  sha256 "bc67ce84751129222f9c6fe7c27116f392ac33e48c4c123a3e835caed201f444"
+  sha256 "f4e0363f0084c2e2fdc1235080f1c12f8d677ad485a0970b123566d2bbb89047"
   version "1.0.0"
   # Homebrew requires tests.
   head do
