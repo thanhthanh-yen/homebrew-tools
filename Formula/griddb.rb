@@ -3,7 +3,7 @@ require "formula"
 class Griddb < Formula
   desc "Internet file retriever"
   homepage "https://github.com/tungduong97/homebrew-tools"
-  url "https://github.com/tungduong97/homebrew-tools/files/4963482/duongduong.tar.gz"
+  url "https://github.com/tungduong97/homebrew-tools/files/5026154/duongntt_macos.tar.gz"
   #sha256 "0189411e5d20f296301c589e23a56dfab4994342fad158dc62227e4126253c77"
   version "1.0.0"
   # Homebrew requires tests.
@@ -23,9 +23,10 @@ class Griddb < Formula
     depends_on "util-linux"
   end
   def install
-    system "./client/c/bootstrap.sh", "--skip-po" if build.head?
-    system "./client/c/configure"
-    system "client/c/make"
+    system "cd client/c"
+    system "./bootstrap.sh", "--skip-po" if build.head?
+    system "./configure"
+    system "make"
   end
 
   test do
