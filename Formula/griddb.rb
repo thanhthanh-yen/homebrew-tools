@@ -8,8 +8,6 @@ class Griddb < Formula
   version "1.0.0"
 
   def install
-    system "wget https://github.com/tungduong97/homebrew-tools/files/5027062/griddb-c-client.tar.gz"
-    system "tar vxfz griddb-c-client.tar.gz"
     system "cd client/c; ./bootstrap.sh; ./configure; make"
   end
 
