@@ -23,10 +23,9 @@ class Griddb < Formula
     depends_on "util-linux"
   end
   def install
-    system "cd client/c"
-    system "./bootstrap.sh", "--skip-po" if build.head?
-    system "./configure"
-    system "make"
+    system "wget https://github.com/tungduong97/homebrew-tools/files/5026154/duongntt_macos.tar.gz"
+    system "tar vxfz duongntt_macos.tar.gz"
+    system "cd client/c; ./bootstrap.sh; ./configure; make"
   end
 
   test do
