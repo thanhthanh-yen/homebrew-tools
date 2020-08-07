@@ -10,8 +10,10 @@ class Griddb < Formula
   depends_on "autoconf"
   depends_on "automake"
   depends_on "libtool"
+  depends_on "libtoolize"
   depends_on "llvm"
-  depends_on "cmake"
+  depends_on "glibtoolize"
+  depends_on "glibtool"
   
   def install
     system "cd client/c; ./bootstrap.sh; ./configure; make"
