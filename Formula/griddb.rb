@@ -12,7 +12,6 @@ class Griddb < Formula
   depends_on "libtool"
   depends_on "llvm"
   depends_on "glibtoolize"
-  depends_on "glibtool"
   
   def install
     system "cd client/c; ./bootstrap.sh; ./configure; make"
