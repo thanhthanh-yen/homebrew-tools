@@ -13,6 +13,7 @@ class Griddb < Formula
   depends_on "llvm"
   
   def install
+    system "ln -s /usr/local/bin/glibtoolize /usr/local/bin/libtoolize"
     system "cd client/c; ./bootstrap.sh; ./configure; make"
   end
 
