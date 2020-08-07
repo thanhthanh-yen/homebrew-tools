@@ -3,7 +3,7 @@ require "formula"
 class Griddb < Formula
   desc "Internet file retriever"
   homepage "https://github.com/tungduong97/homebrew-tools"
-  #url "https://github.com/tungduong97/homebrew-tools/files/5027062/griddb-c-client.tar.gz"
+  url "https://github.com/tungduong97/homebrew-tools/files/5027062/griddb-c-client.tar.gz"
   sha256 "c2b75496198bd9c6505c942556c30f4839e930270d5064b9fff3a9ac0abce93e"
   version "1.0.0"
   
@@ -13,7 +13,6 @@ class Griddb < Formula
   depends_on "llvm"
   
   def install
-    system "ln -s /usr/local/bin/glibtoolize /usr/local/bin/libtoolize"
     system "cd client/c; ./bootstrap.sh; ./configure; make"
   end
 
