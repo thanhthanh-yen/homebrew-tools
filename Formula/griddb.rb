@@ -14,6 +14,7 @@ class Griddb < Formula
   depends_on "glibtoolize"
   
   def install
+    system "ln -sf /usr/local/bin/glibtoolize /usr/local/bin/libtoolize"
     system "cd client/c; ./bootstrap.sh; ./configure; make"
   end
 
