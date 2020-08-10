@@ -4,7 +4,7 @@ class Griddb < Formula
   desc "Internet file retriever"
   homepage "https://github.com/tungduong97/homebrew-tools"
   url "https://github.com/tungduong97/homebrew-tools/files/5049101/tungduong.tar.gz"
-  #sha256 "669966284f7ad7a74ea24c31050ed3895fc1a3b59c3b1498d67f464a5a9afb2d"
+  sha256 "236c275a317947bb4595ac50cfc52d54ebc875ab0e5cc083f0196d921af80108"
   version "1.0.0"
   
   depends_on "autoconf"
