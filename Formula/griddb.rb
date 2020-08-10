@@ -4,7 +4,7 @@ class Griddb < Formula
   desc "Internet file retriever"
   homepage "https://github.com/tungduong97/homebrew-tools"
   url "https://github.com/tungduong97/homebrew-tools/files/5048938/griddb-c-macos.tar.gz"
-  #sha256 "58ae51361580b3e466be477ab4bdcaaa86661f4064e074aaefbac94096ff82d8"
+  sha256 "669966284f7ad7a74ea24c31050ed3895fc1a3b59c3b1498d67f464a5a9afb2d"
   version "1.0.0"
   
   depends_on "autoconf"
