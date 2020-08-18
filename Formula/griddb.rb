@@ -13,7 +13,7 @@ class Griddb < Formula
   depends_on "llvm"
   
   def install
-    system "cd client/c; ./bootstrap.sh; ./configure; make install"
+    system "cd client/c; ./bootstrap.sh; ./configure --prefix='/usr/local'; make install"
   end
 
   test do
