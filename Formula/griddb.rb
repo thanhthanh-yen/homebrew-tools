@@ -13,8 +13,11 @@ class Griddb < Formula
   depends_on "llvm"
   
   def install
-    #system "cd client/c; ./bootstrap.sh; ./configure ; make install DESTDIR=/Users/$USER"
-    system "cd client/c", "./bootstrap.sh", "./configure" , " make install DESTDIR=/Users/$USER" "
+    system "cd client/c", "./bootstrap.sh", "./configure" , "make install DESTDIR=/Users/$USER"
   end
-
+  
+  test do
+    assert_match "griddb version 1.0.0", shell_output("#{bin}/griddb -v", 2)
+  end
+  
 end
