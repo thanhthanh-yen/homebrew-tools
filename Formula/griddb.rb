@@ -18,8 +18,6 @@ class Griddb < Formula
   end
 
   head do
-    url "https://git.savannah.gnu.org/git/wget.git"
-
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "xz" => :build
@@ -50,7 +48,7 @@ class Griddb < Formula
   end
 
   test do
-    system bin/"wget", "-O", "/dev/null", "https://google.com"
+    system bin/"griddb", "-O", "/dev/null", "https://google.com"
   end
   
 end
