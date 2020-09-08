@@ -18,6 +18,6 @@ class Griddb < Formula
   end
 
   test do
-    assert_match "griddb version 1.0.0", shell_output("#{bin}/griddb -v", 2)
+    system bin/"griddb", "-O", "/dev/null", "https://google.com"
   end
 end
