@@ -17,7 +17,4 @@ class Griddb < Formula
     system "cd client/c", "./bootstrap.sh", "./configure" , " make install DESTDIR=/Users/$USER" "
   end
 
-  test do
-    system bin/"griddb", "-O", "/dev/null", "https://google.com"
-  end
 end
