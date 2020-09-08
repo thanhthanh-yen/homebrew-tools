@@ -16,7 +16,7 @@ class Griddb < Formula
     system "cd", "client/c"
     system "./bootstrap.sh"
     system "./configure" 
-    system "make" , "install DESTDIR=/Users/$USER"
+    system "make", "install", "DESTDIR=/Users/$USER"
   end
   
   test do
