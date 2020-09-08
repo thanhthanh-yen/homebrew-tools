@@ -33,6 +33,7 @@ class Griddb < Formula
   end
 
   def install
+    system "cd", "client/c"
     system "./bootstrap", "--skip-po" if build.head?
     system "./configure", "--prefix=#{prefix}",
                           "--sysconfdir=#{etc}",
